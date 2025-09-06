@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineers' Day 2025 | Vaishnavi Institutes of Technology & Science</title>
+    
+    <!-- Google Fonts: Orbitron for headings, Poppins for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Base Styles */
+        :root {
+            --primary-color: #00aaff; /* VITS Inspired Blue */
+            --secondary-color: #00d4ff;
+            --dark-blue: #020f29;
+            --text-color: #e0e0e0;
+            --card-bg: rgba(2, 23, 61, 0.7);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            margin: 0;
+            overflow-x: hidden;
+            background-image:
+                linear-gradient(rgba(2, 15, 41, 0.95), rgba(2, 15, 41, 0.95)),
+                url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        
+        /* Animated Background Elements */
+        .background-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            list-style: none;
+            display: block;
+            background: rgba(0, 170, 255, 0.1);
+            animation: animateShapes 20s linear infinite;
+            bottom: -150px;
+            border: 1px solid rgba(0, 170, 255, 0.2);
+        }
+        
+        .shape:nth-child(1){ left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+        .shape:nth-child(2){ left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+        .shape:nth-child(3){ left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+        .shape:nth-child(4){ left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+        .shape:nth-child(5){ left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+        .shape:nth-child(6){ left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+        .shape:nth-child(7){ left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+        .shape:nth-child(8){ left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+        .shape:nth-child(9){ left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+        .shape:nth-child(10){ left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
+
+        @keyframes animateShapes {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; }
+            100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
+        }
+
+        /* Container & Typography */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--secondary-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Header Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .hero .college-logo {
+            max-width: 150px;
+            margin-bottom: 2rem;
+            border-radius: 50%; /* Added for better glow effect */
+            animation: pulseGlow 4s ease-in-out infinite; /* Added animation */
+        }
+        .hero h3 {
+            font-size: 1.5rem;
+            color: white;
+            font-family: 'Poppins';
+            text-transform: none;
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 1rem 0;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 1rem auto 2rem;
+        }
+        
+        /* Countdown Timer */
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .countdown-item {
+            background: var(--card-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--primary-color);
+            backdrop-filter: blur(10px);
+            min-width: 100px;
+        }
+        .countdown-item span {
+            display: block;
+            font-size: 2.5rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary-color);
+        }
+        .countdown-item p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: var(--text-color);
+            text-transform: uppercase;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px var(--secondary-color);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px var(--secondary-color);
+            }
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 5rem 0;
+            border-top: 1px solid rgba(0, 170, 255, 0.2);
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Principal's Message */
+        .principal-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            border-left: 5px solid var(--primary-color);
+        }
+        .principal-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            object-fit: cover;
+        }
+        .principal-card blockquote {
+            margin: 0;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        .principal-card footer {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        /* Event Details Grid */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .detail-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .detail-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+        .detail-item svg {
+            width: 50px;
+            height: 50px;
+            stroke: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .detail-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Interactive Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-container.left { left: 0; }
+        .timeline-container.right { left: 50%; }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12.5px;
+            background-color: var(--dark-blue);
+            border: 4px solid var(--secondary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .right::after { left: -12.5px; }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background: var(--card-bg);
+            position: relative;
+            border-radius: 10px;
+        }
+        .timeline-content h3 { font-size: 1.2rem; }
+        
+        /* Map and RSVP */
+        .map-container {
+            text-align: center;
+        }
+        .map-container iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+        }
+        .rsvp-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(0, 170, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero h3 { font-size: 1.2rem; }
+            #countdown { flex-wrap: wrap; }
+            .countdown-item { min-width: 80px; padding: 0.5rem 1rem; }
+            .countdown-item span { font-size: 1.8rem; }
+            
+            .principal-card { flex-direction: column; text-align: center; }
+            
+            .timeline::after { left: 31px; }
+            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-container.right { left: 0%; }
+            .timeline-container::after { left: 18px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <ul class="background-shapes">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <!-- EDIT: You can replace this placeholder with your actual college logo URL -->
+        <img style="border-radius: 50%;" src="logo.png" alt="VITS Logo" class="college-logo">
+        <h3>Vaishnavi Institutes of Technology & Science, Bhopal</h3>
+        <h1>Engineers' Day 2025</h1>
+        <p>A confluence of brilliant minds celebrating the art of innovation, the power of creation, and the future of technology.</p>
+        
+        <div id="countdown">
+            <div class="countdown-item"><span id="days">00</span><p>Days</p></div>
+            <div class="countdown-item"><span id="hours">00</span><p>Hours</p></div>
+            <div class="countdown-item"><span id="minutes">00</span><p>Minutes</p></div>
+            <div class="countdown-item"><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+
+        <a href="#rsvp" class="rsvp-button" style="margin-top: 4rem;">RSVP Now</a>
+    </header>
+
+    <main class="container">
+        <!-- Principal's Message Section -->
+        <section class="section">
+            <h2>A Message from the Principal</h2>
+            <div class="principal-card">
+                <!-- EDIT: You can replace this placeholder with the Principal's actual photo -->
+                <img src="hod cse.jpg" alt="Principal of VITS">
+                <div>
+                    <blockquote>"Engineering is the closest thing to magic that exists in the world. At VITS, we don't just teach it; we inspire our students to live it. We are thrilled to welcome you to a day that showcases this very magic. Let us celebrate the architects of tomorrow, together."</blockquote>
+                    <!-- EDIT: Update the name if needed -->
+                    <footer>Prof. Jayshree Boaddh, Principal<br>Vaishnavi Institutes of Technology & Science</footer>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Event Details -->
+        <section class="section">
+            <h2>Event Details</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3>Date</h3>
+                    <p>15th September 2025</p>
+                </div>
+                <div class="detail-item">
+                    <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>Time</h3>
+                    <p>10:00 AM Onwards</p>
+                </div>
+                <div class="detail-item">
+                    <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3>Venue</h3>
+                    <p>Main Auditorium, VITS Campus, Bhopal</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agenda Section -->
+        <section class="section">
+            <h2>Day's Agenda</h2>
+            <div class="timeline">
+                <!-- EDIT: Update agenda items as needed -->
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>10:00 AM - Inauguration</h3>
+                        <p>Lamp lighting ceremony and welcome address.</p>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>11:00 AM - Keynote Address</h3>
+                        <p>An inspiring talk by an eminent personality from the tech industry.</p>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>12:30 PM - Project Expo 'InnovateX'</h3>
+                        <p>Showcase of groundbreaking projects by VITS students.</p>
+                    </div>
+                </div>
+                 <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>02:00 PM - Panel Discussion</h3>
+                        <p>Future of AI & Robotics: A discussion with industry experts.</p>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>03:30 PM - Award Ceremony</h3>
+                        <p>Recognizing the brightest talents and most innovative projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Location and RSVP Section -->
+        <section id="rsvp" class="section">
+            <h2>Join Us</h2>
+            <div class="map-container">
+                <p>Find your way to the future of innovation.</p>
+                <!-- EDIT: This is a live Google Map of your college. -->
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!m12!1m3!1d3667.636603099039!2d77.48750841543884!3d23.1832014150937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c5b3697984f49%3A0x103d356778f1689b!2sVaishnavi%20Institute%20of%20Technology%20%26%20Science%2C%20Bhopal!5e0!3m2!1sen!2sin!4v1664364012345" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
+                <!-- EDIT: Update your email address for RSVPs -->
+                <a href="mailto:events@vitsbhopal.com?subject=RSVP%20for%20Engineers%27%20Day%202025" class="rsvp-button">Confirm Your Attendance</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vaishnavi Institutes of Technology & Science, Bhopal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Clear any existing interval to prevent duplicates when the script is re-run
+        if (window.engineersDayCountdown) {
+            clearInterval(window.engineersDayCountdown);
+        }
+
+        // Set the date we're counting down to
+        // EDIT: Set your event date here (Year, Month (0-11), Day, Hour, Minute, Second)
+        const countDownDate = new Date("Sep 15, 2025 10:00:00").getTime();
+
+        // Update the count down every 1 second
+        window.engineersDayCountdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the elements
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(window.engineersDayCountdown);
+                document.getElementById("countdown").innerHTML = "<div style='font-size: 1.5rem; color: var(--primary-color);'>The Event is LIVE!</div>";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
+
