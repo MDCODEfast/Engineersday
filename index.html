@@ -340,7 +340,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <!-- EDIT: You can replace this placeholder with your actual college logo URL -->
-        <img style="border-radius: 50%;" src="logo.png" alt="VITS Logo" class="college-logo">
+        <img src="https://via.placeholder.com/150/FFFFFF/00aaff?text=VITS" alt="VITS Logo" class="college-logo">
         <h3>Vaishnavi Institutes of Technology & Science, Bhopal</h3>
         <h1>Engineers' Day 2025</h1>
         <p>A confluence of brilliant minds celebrating the art of innovation, the power of creation, and the future of technology.</p>
@@ -361,11 +361,11 @@
             <h2>A Message from the Principal</h2>
             <div class="principal-card">
                 <!-- EDIT: You can replace this placeholder with the Principal's actual photo -->
-                <img src="hod cse.jpg" alt="Principal of VITS">
+                <img src="https://via.placeholder.com/150" alt="Principal of VITS">
                 <div>
                     <blockquote>"Engineering is the closest thing to magic that exists in the world. At VITS, we don't just teach it; we inspire our students to live it. We are thrilled to welcome you to a day that showcases this very magic. Let us celebrate the architects of tomorrow, together."</blockquote>
                     <!-- EDIT: Update the name if needed -->
-                    <footer>Prof. Jayshree Boaddh, Principal<br>Vaishnavi Institutes of Technology & Science</footer>
+                    <footer>Dr. A. G. K. Jilani, Principal<br>Vaishnavi Institutes of Technology & Science</footer>
                 </div>
             </div>
         </section>
@@ -436,9 +436,10 @@
             <div class="map-container">
                 <p>Find your way to the future of innovation.</p>
                 <!-- EDIT: This is a live Google Map of your college. -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.19679954186!2d77.53679662942884!3d23.126480771443678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c471b28b09285%3A0x14af5eacaeb29e96!2sVaishnavi%20Technology%20and%20Science%20College!5e0!3m2!1sen!2sin!4v1757179476158!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <!-- EDIT: Update your email address for RSVPs -->
-                <a href="mailto:mdk737301@gmail.com?subject=RSVP%20for%20Engineers%27%20Day%202025" class="rsvp-button">Confirm Your Attendance</a>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.636603099039!2d77.48750841543884!3d23.1832014150937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c5b3697984f49%3A0x103d356778f1689b!2sVaishnavi%20Institute%20of%20Technology%20%26%20Science%2C%20Bhopal!5e0!3m2!1sen!2sin!4v1664364012345" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
+                <!-- This link will be dynamically changed by the script below -->
+                <a id="rsvp-link" href="#" class="rsvp-button">Confirm Your Attendance</a>
             </div>
         </section>
     </main>
@@ -480,10 +481,29 @@
                 document.getElementById("countdown").innerHTML = "<div style='font-size: 1.5rem; color: var(--primary-color);'>The Event is LIVE!</div>";
             }
         }, 1000);
+
+        // Device-specific RSVP link logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const rsvpLink = document.getElementById('rsvp-link');
+            const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+
+            // --- EDIT YOUR LINKS HERE ---
+            const mailtoLink = "mailto:mdk737301@gmail.com?subject=RSVP%20for%20Engineers%27%20Day%202025";
+            const formLink = "https://forms.gle/73YzzCieASNw6spG9"; // Replace with your actual Google Form link
+            // -------------------------
+
+            if (isMobile) {
+                // For mobile phones, use the mail link
+                rsvpLink.href = mailtoLink;
+            } else {
+                // For desktops, use the Google Form link and open in a new tab
+                rsvpLink.href = formLink;
+                rsvpLink.target = "_blank";
+                rsvpLink.rel = "noopener noreferrer";
+            }
+        });
     </script>
 
 </body>
 </html>
-
-
 
