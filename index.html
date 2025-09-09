@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitation for "Engineers' Day 2025" | Vaishnavi Institutes of Technology & Science</title>
     
-    <!-- Google Fonts: Orbitron for headings, Poppins for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -248,7 +247,7 @@
         .timeline-container {
             padding: 10px 40px;
             position: relative;
-            width: 50%;
+            width: 40%;
         }
         .timeline-container.left { left: 0; }
         .timeline-container.right { left: 50%; }
@@ -258,14 +257,17 @@
             position: absolute;
             width: 25px;
             height: 25px;
-            right: -12.5px;
+            right: -17.5px;
             background-color: var(--dark-blue);
             border: 4px solid var(--secondary-color);
-            top: 15px;
+            /* --- FIX START --- */
+            top: 50%;
+            transform: translateY(-50%);
+            /* --- FIX END --- */
             border-radius: 50%;
             z-index: 1;
         }
-        .right::after { left: -12.5px; }
+        .right::after { left: -15.5px; }
         
         .timeline-content {
             padding: 20px 30px;
@@ -332,14 +334,11 @@
 </head>
 <body>
 
-    <!-- Animated Background -->
     <ul class="background-shapes">
         <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
     </ul>
 
-    <!-- Hero Section -->
     <header class="hero">
-        <!-- EDIT: You can replace this placeholder with your actual college logo URL -->
         <img src="logo.png" alt="VITS Logo" class="college-logo">
         <h3>Vaishnavi Institutes of Technology & Science, Bhopal</h3>
         <h1>Invitation for "Engineers' Day 2025"</h1>
@@ -356,21 +355,17 @@
     </header>
 
     <main class="container">
-        <!-- Principal's Message Section -->
         <section class="section">
             <h2>A Message from the Principal</h2>
             <div class="principal-card">
-                <!-- EDIT: You can replace this placeholder with the Principal's actual photo -->
                 <img src="hod cse.jpg" alt="Principal of VITS">
                 <div>
                     <blockquote>"Engineering is the closest thing to magic that exists in the world. At VITS, we don't just teach it; we inspire our students to live it. We are thrilled to welcome you to a day that showcases this very magic. Let us celebrate the architects of tomorrow, together."</blockquote>
-                    <!-- EDIT: Update the name if needed -->
                     <footer>Prof. Jayshree Boaddh, Principal<br>Vaishnavi Institutes of Technology & Science</footer>
                 </div>
             </div>
         </section>
         
-        <!-- Event Details -->
         <section class="section">
             <h2>Event Details</h2>
             <div class="details-grid">
@@ -392,11 +387,9 @@
             </div>
         </section>
 
-        <!-- Agenda Section -->
         <section class="section">
             <h2>Innovators’ Arena</h2>
             <div class="timeline">
-                <!-- EDIT: Update agenda items as needed -->
                 <div class="timeline-container left">
                     <div class="timeline-content">
                         <h3>10:00 AM - Tech Rangoli</h3>
@@ -442,23 +435,18 @@
             </div>
         </section>
         
-        <!-- Location and RSVP Section -->
         <section id="rsvp" class="section">
             <h2>Join Us</h2>
             <div class="map-container">
                 <p>Find your way to the future of innovation.</p>
-                <!-- EDIT: This is a live Google Map of your college. -->
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.19679954186!2d77.53679662942884!3d23.126480771443678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c471b28b09285%3A0x14af5eacaeb29e96!2sVaishnavi%20Technology%20and%20Science%20College!5e0!3m2!1sen!2sin!4v1757179476158!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <!-- EDIT: Update your email address for RSVPs -->
-                
-                <!-- This link will be dynamically changed by the script below -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.19679954186!2d77.53679662942884!3d23.126480771443678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c471b28b09285%3A0x14af5eacaeb29e96!2sVaishnavi%20Technology%20and%20Science%20College!5e0!3m2!1sen!2sin!4v1757179476158!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <a id="rsvp-link" href="#" class="rsvp-button">Confirm Your Attendance</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Vaishnavi Institutes of Technology & Science, Bhopal. All Rights Reserved.</p>
+        <p>© 2025 Vaishnavi Institutes of Technology & Science, Bhopal. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -519,7 +507,3 @@
 
 </body>
 </html>
-
-
-
-
