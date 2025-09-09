@@ -179,6 +179,11 @@
             border-radius: 15px;
             padding: 2rem;
             border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+        }
+        .principal-card:hover { /* Added hover effect for principal card */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.3);
         }
         .principal-card img {
             width: 150px;
@@ -210,11 +215,12 @@
             border-radius: 10px;
             text-align: center;
             border: 1px solid transparent;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
         }
         .detail-item:hover {
             transform: translateY(-10px);
             border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.3); /* Enhanced shadow on hover */
         }
         .detail-item svg {
             width: 50px;
@@ -248,10 +254,26 @@
             padding: 10px 40px;
             position: relative;
             width: 40%;
+            /* --- ANIMATION: Initial State --- */
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: transform, opacity;
         }
-        .timeline-container.left { left: 0; }
-        .timeline-container.right { left: 50%; }
+        .timeline-container.left { 
+            left: 0; 
+            transform: translateX(-100px);
+        }
+        .timeline-container.right { 
+            left: 50%; 
+            transform: translateX(100px);
+        }
         
+        /* --- ANIMATION: Visible State --- */
+        .timeline-container.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
         .timeline-container::after {
             content: '';
             position: absolute;
@@ -260,10 +282,8 @@
             right: -17.5px;
             background-color: var(--dark-blue);
             border: 4px solid var(--secondary-color);
-            /* --- FIX START --- */
             top: 50%;
             transform: translateY(-50%);
-            /* --- FIX END --- */
             border-radius: 50%;
             z-index: 1;
         }
@@ -274,8 +294,23 @@
             background: var(--card-bg);
             position: relative;
             border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
         }
+        .timeline-content:hover { /* Added hover effect for timeline content */
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.3);
+        }
+
         .timeline-content h3 { font-size: 1.2rem; }
+
+        /* Hover effect for Register Here links */
+        .timeline-content a {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .timeline-content a:hover {
+            background-color: var(--secondary-color) !important; /* Brighter blue on hover */
+            transform: scale(1.05);
+        }
         
         /* Map and RSVP */
         .map-container {
@@ -328,6 +363,11 @@
             .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
             .timeline-container.right { left: 0%; }
             .timeline-container::after { left: 18px; }
+
+            /* Adjust animation for mobile */
+            .timeline-container.left, .timeline-container.right {
+                transform: translateX(50px);
+            }
         }
 
     </style>
@@ -397,8 +437,8 @@
                         <a href="https://forms.gle/sysvKRP9QThPPx3N8" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00aaff; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.9em;">Register Here</a>
                     </div>
                 </div>
-               
-               
+                
+                
                  <div class="timeline-container right">
                     <div class="timeline-content">
                         <h3>Date: 13/09/2025 <br>Time 10:00 AM - Wall of Fame</h3>
@@ -420,7 +460,7 @@
                         <a href="https://forms.gle/sysvKRP9QThPPx3N8" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00aaff; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.9em;">Register Here</a>
                     </div>
                 </div>
-        
+    
                 <div class="timeline-container left">
                     <div class="timeline-content">
                         <h3>Date: 15/09/2025 <br>Time 10:00 AM - Bridge Structure Competition</h3>
@@ -428,7 +468,7 @@
                         <a href="https://forms.gle/sysvKRP9QThPPx3N8" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00aaff; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.9em;">Register Here</a>
                     </div>
                 </div>
-        
+    
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <h3>Date: 15/09/2025 <br>Time 11:30 AM - Poster Presentation</h3>
@@ -436,7 +476,7 @@
                         <a href="https://forms.gle/sysvKRP9QThPPx3N8" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00aaff; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.9em;">Register Here</a>
                     </div>
                 </div>
-        
+    
                 <div class="timeline-container left">
                     <div class="timeline-content">
                         <h3>Date: 15/09/2025 <br>Time 01:30 PM - Project Presentation</h3>
@@ -444,7 +484,7 @@
                         <a href="https://forms.gle/sysvKRP9QThPPx3N8" target="_blank" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: #00aaff; color: white; text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.9em;">Register Here</a>
                     </div>
                 </div>
-        
+    
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <h3>Date: 15/09/2025 <br>Time 03:00 PM - Award Ceremony</h3>
@@ -477,7 +517,6 @@
         }
 
         // Set the date we're counting down to
-        // EDIT: Set your event date here (Year, Month (0-11), Day, Hour, Minute, Second)
         const countDownDate = new Date("Sep 15, 2025 10:00:00").getTime();
 
         // Update the count down every 1 second
@@ -504,22 +543,33 @@
             }
         }, 1000);
 
-         // RSVP link logic
+         // Logic for RSVP link and animations
          document.addEventListener('DOMContentLoaded', function() {
+            // RSVP link logic
             const rsvpLink = document.getElementById('rsvp-link');
-            
-            // --- EDIT YOUR FORM LINK HERE ---
-            const formLink = "https://forms.gle/73YzzCieASNw6spG9"; // Replace with your actual Google Form link
-            // --------------------------------
-
-            // Use the Google Form link for all devices and open in a new tab
+            const formLink = "https://forms.gle/73YzzCieASNw6spG9";
             rsvpLink.href = formLink;
             rsvpLink.target = "_blank";
             rsvpLink.rel = "noopener noreferrer";
+
+            // Animation on scroll logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const timelineItems = document.querySelectorAll('.timeline-container');
+            timelineItems.forEach((item) => {
+                observer.observe(item);
+            });
         });
         
     </script>
 
 </body>
 </html>
-
